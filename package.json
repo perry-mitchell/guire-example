@@ -1,0 +1,25 @@
+{
+  "name": "guire-example",
+  "version": "0.1.0",
+  "description": "Example GUIRE project",
+  "main": "source/index.js",
+  "scripts": {
+    "build": "webpack ./source/index.js build/bundle.js",
+    "guire": "guire --report-dir test/report --reference-dir test/reference test/specs/component.suite.js",
+    "test": "npm run build && npm run guire"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/guire-example.git"
+  },
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perry-mitchell/guire-example/issues"
+  },
+  "homepage": "https://github.com/perry-mitchell/guire-example#readme",
+  "devDependencies": {
+    "@kiosked/guire": "^0.3.3",
+    "webpack": "^1.13.1"
+  }
+}
